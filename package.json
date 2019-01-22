@@ -1,0 +1,24 @@
+{
+  "name": "@fdot/moment-florida-business-days",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "Jeremy Conger <jeremy.conger@dot.state.fl.us>",
+  "license": "MIT",
+  "dependencies": {
+    "moment-business-days": "^1.1.3"
+  },
+  "peerDependencies": {
+    "moment": "2.x.x"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "moment": "^2.24.0"
+  },
+  "jest": {
+    "collectCoverage": true
+  }
+}
