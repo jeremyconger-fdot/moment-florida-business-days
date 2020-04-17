@@ -1,6 +1,7 @@
-const moment = require('moment-business-days');
+//const moment = require('moment-business-days');
+import moment from "moment-business-days";
 
-const isNewYear = (aMoment) => {
+export const isNewYear = (aMoment) => {
     var newYearsDay = moment('01-01-2018', 'MM-DD-YYYY').year(aMoment.year());
 
     if (newYearsDay.day() === 0) {
@@ -12,7 +13,7 @@ const isNewYear = (aMoment) => {
     return newYearsDay.format('l') === aMoment.format('l');
 }
 
-const isEndOfYearNewYear = (aMoment) => {
+export const isEndOfYearNewYear = (aMoment) => {
     var newYearsDay = moment('01-01-2018', 'MM-DD-YYYY').year(aMoment.year() + 1);
 
     if (newYearsDay.day() === 6) {
@@ -24,7 +25,7 @@ const isEndOfYearNewYear = (aMoment) => {
     return false;
 }
 
-const isIndependenceDay = (aMoment) => {
+export const isIndependenceDay = (aMoment) => {
     var independenceDay = moment('07-04-2018', 'MM-DD-YYYY').year(aMoment.year());
 
     if (independenceDay.day() === 0) {
@@ -36,7 +37,7 @@ const isIndependenceDay = (aMoment) => {
     return independenceDay.format('l') === aMoment.format('l');
 }
 
-const isLaborDay = (aMoment) => {
+export const isLaborDay = (aMoment) => {
     var laborDay = moment('09-01-2018', 'MM-DD-YYYY').year(aMoment.year());
     while (laborDay.day() !== 1) {
         laborDay.add('1', 'days')
@@ -45,7 +46,7 @@ const isLaborDay = (aMoment) => {
     return laborDay.format('l') === aMoment.format('l');
 }
 
-const isMemorialDay = (aMoment) => {
+export const isMemorialDay = (aMoment) => {
     var memorialDay = moment('05-31-2018', 'MM-DD-YYYY').year(aMoment.year());
     while (memorialDay.day() !== 1) {
         memorialDay.subtract('1', 'days')
@@ -54,7 +55,7 @@ const isMemorialDay = (aMoment) => {
     return memorialDay.format('l') === aMoment.format('l');
 }
 
-const isMlkJrDay = (aMoment) => {
+export const isMlkJrDay = (aMoment) => {
     var mlkJrDay = moment('01-01-2018', 'MM-DD-YYYY').year(aMoment.year()).add('14', 'days');
     while (mlkJrDay.day() !== 1) {
         mlkJrDay.add('1', 'days')
@@ -63,7 +64,7 @@ const isMlkJrDay = (aMoment) => {
     return mlkJrDay.format('l') === aMoment.format('l');
 }
 
-const isThanksgivingDays = (aMoment) => {
+export const isThanksgivingDays = (aMoment) => {
     var thanksgivingDay = moment('11-22-2018', 'MM-DD-YYYY').year(aMoment.year());
     var dayAfterthanksgivingDay = moment('11-23-2018', 'MM-DD-YYYY').year(aMoment.year());
     while (thanksgivingDay.day() !== 4) {
@@ -74,7 +75,7 @@ const isThanksgivingDays = (aMoment) => {
     return thanksgivingDay.format('l') === aMoment.format('l') || dayAfterthanksgivingDay.format('l') === aMoment.format('l');
 }
 
-const isVeteransDay = (aMoment) => {
+export const isVeteransDay = (aMoment) => {
     var veteransDay = moment('11-11-2018', 'MM-DD-YYYY').year(aMoment.year());
 
     if (veteransDay.day() === 0) {
@@ -86,7 +87,7 @@ const isVeteransDay = (aMoment) => {
     return veteransDay.format('l') === aMoment.format('l');
 }
 
-const isChristmasDay = (aMoment) => {
+export const isChristmasDay = (aMoment) => {
     var christmasDay = moment('12-25-2018', 'MM-DD-YYYY').year(aMoment.year());
 
     if (christmasDay.day() === 0) {
@@ -108,4 +109,5 @@ let config = {
 
 moment.updateLocale('us', config);
 
-module.exports = moment;
+//module.exports = moment;
+export default moment;

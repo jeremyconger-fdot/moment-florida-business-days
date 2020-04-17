@@ -1,4 +1,5 @@
-import * as moment from 'moment';
+//import * as moment from 'moment';
+import moment from 'moment';
 
 declare module 'moment' {
     interface Moment {
@@ -21,4 +22,4 @@ declare module 'moment' {
     }
 }
 
-export = moment;
+export default moment;
