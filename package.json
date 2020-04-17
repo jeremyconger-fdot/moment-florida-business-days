@@ -22,5 +22,5 @@
   "jest": {
     "collectCoverage": true
   },
-  "types": "index.d.ts"
+  "types": "./dist/index.d.ts"
 }
