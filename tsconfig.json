@@ -7,6 +7,9 @@
     "strict": true,                           /* Enable all strict type-checking options. */
     "esModuleInterop": true, 
     "moduleResolution": "node",                 /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "sourceMap": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "tests"]
 }
