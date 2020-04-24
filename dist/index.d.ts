@@ -1,0 +1,11 @@
+import moment from "moment-business-days";
+export declare const isNewYear: (aMoment: any) => boolean;
+export declare const isEndOfYearNewYear: (aMoment: any) => boolean;
+export declare const isIndependenceDay: (aMoment: any) => boolean;
+export declare const isLaborDay: (aMoment: any) => boolean;
+export declare const isMemorialDay: (aMoment: any) => boolean;
+export declare const isMlkJrDay: (aMoment: any) => boolean;
+export declare const isThanksgivingDays: (aMoment: any) => boolean;
+export declare const isVeteransDay: (aMoment: any) => boolean;
+export declare const isChristmasDay: (aMoment: any) => boolean;
+export default moment;

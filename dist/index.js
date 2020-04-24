@@ -91,3 +91,4 @@ var config = {
 };
 moment_business_days_1.default.updateLocale('us', config);
 exports.default = moment_business_days_1.default;
+//# sourceMappingURL=index.js.map
